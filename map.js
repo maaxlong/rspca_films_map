@@ -23,21 +23,25 @@ function loadGeoJSONWithNumbers(url, layerOptions, isCinema) {
             let count = 1; // Start numbering from 1
             L.geoJSON(data, {
                 pointToLayer: function (feature, latlng) {
-                    return L.circleMarker(latlng, {
+                    const marker = L.circleMarker(latlng, {
                         radius: 8,
                         fillColor: isCinema ? "blue" : "red", // Blue for cinema, red for caravan
                         color: "#000",
                         weight: 1,
                         opacity: 1,
                         fillOpacity: 0.8
-                    }).bindTooltip(
-                        count++.toString(),  // 
+                    });
+
+                    marker.bindTooltip(
+                        `${count++}`, // ✅ Convert number to string
                         { 
                             permanent: true,
                             direction: "center",
-                            className: "custom-label" //
+                            className: "custom-label" // ✅ Correct syntax
                         }
                     );
+
+                    return marker; // ✅ Return marker
                 },
                 style: layerOptions.style || {} // Apply styles if available
             }).addTo(map);
