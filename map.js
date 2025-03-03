@@ -55,10 +55,8 @@ const cinemaLineStyle = { style: { color: "blue", weight: 2 } };
 const caravanLineStyle = { style: { color: "red", weight: 2 } };
 
 // Load GeoJSON files with numbering
-loadGeoJSONWithNumbers("data/cinema_march.geojson", cinemaLineStyle, true);
-loadGeoJSONWithNumbers("data/cinema_april.geojson", cinemaLineStyle, true);
+loadGeoJSONWithNumbers("data/cinema_1931.geojson", cinemaLineStyle, true);
 loadGeoJSONWithNumbers("data/cinema_route.geojson", cinemaLineStyle, true);
 
-loadGeoJSONWithNumbers("data/caravan_march.geojson", caravanLineStyle, false);
-loadGeoJSONWithNumbers("data/caravan_april.geojson", caravanLineStyle, false);
+loadGeoJSONWithNumbers("data/caravan_1931.geojson", caravanLineStyle, false);
 loadGeoJSONWithNumbers("data/caravan_route.geojson", caravanLineStyle, false);
