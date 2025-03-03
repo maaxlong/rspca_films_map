@@ -30,11 +30,14 @@ function loadGeoJSONWithNumbers(url, layerOptions, isCinema) {
                         weight: 1,
                         opacity: 1,
                         fillOpacity: 0.8
-                    }).bindTooltip(count++.toString(), { // Convert number to string
-                        permanent: true,
-                        direction: "center",
-                        className: "custom-label" // Custom CSS styling for numbering
-                    });
+                    }).bindTooltip(
+                        count++.toString(),  // 
+                        { 
+                            permanent: true,
+                            direction: "center",
+                            className: "custom-label" //
+                        }
+                    );
                 },
                 style: layerOptions.style || {} // Apply styles if available
             }).addTo(map);
