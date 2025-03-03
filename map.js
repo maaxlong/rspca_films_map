@@ -1,10 +1,10 @@
 // Initialize the map
 var map = L.map('map').setView([51.505, -0.09], 10); // Adjust coordinates and zoom as needed
 
-// Load MapTiler vector tiles
-var vectorTiles = L.maptilerVectorTileLayer({
-    apiKey: "yTjHGySI1O0GBeIuFBYT",
-    style: "https://api.maptiler.com/maps/335a00a8-0f1b-475d-88a4-8cffc79b10ec/style.json"
+// Load MapTiler vector tiles using maplibre-gl
+L.maplibreGL({
+    style: "https://api.maptiler.com/maps/335a00a8-0f1b-475d-88a4-8cffc79b10ec/style.json?key=yTjHGySI1O0GBeIuFBYT",
+    attribution: '&copy; <a href="https://www.maptiler.com/">MapTiler</a> contributors'
 }).addTo(map);
 
 // Function to load and display GeoJSON files
