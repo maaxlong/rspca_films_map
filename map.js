@@ -30,7 +30,7 @@ function loadGeoJSONWithNumbers(url, layerOptions, isCinema) {
                         weight: 1,
                         opacity: 1,
                         fillOpacity: 0.8
-                    }).bindTooltip(count++, { // Increment counter for each point
+                    }).bindTooltip(count++.toString(), { // Convert number to string
                         permanent: true,
                         direction: "center",
                         className: "custom-label" // Custom CSS styling for numbering
