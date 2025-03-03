@@ -10,8 +10,12 @@ const mtLayer = L.maptiler.maptilerLayer({
     style: "https://api.maptiler.com/maps/335a00a8-0f1b-475d-88a4-8cffc79b10ec/style.json"
 }).addTo(map);
 
-// Function to load and display GeoJSON files with numbered markers
-function loadGeoJSONWithNumbers(url, layerOptions, isCinema) {
+// Lists of locations where names should be displayed
+const caravanNamedLocations = ["Weymouth", "Leicester", "Poole", "Salisbury", "Southampton", "Petersfield", "Cheltenham", "Aylesbury", "Kettering"];
+const cinemaNamedLocations = ["St Davids", "Haverfordwest", "Cardiff", "Newport", "Knighton", "Llanon"];
+
+// Function to load and display GeoJSON files with numbered markers and optional names
+function loadGeoJSONWithLabels(url, layerOptions, isCinema) {
     fetch(url)
         .then(response => {
             if (!response.ok) {
@@ -30,22 +34,38 @@ function loadGeoJSONWithNumbers(url, layerOptions, isCinema) {
                         weight: 1,
                         opacity: 1,
                         fillOpacity: 0.8
-                    });
-
-                    marker.bindTooltip(
-                        `${count++}`, // ✅ Convert number to string
+                    }).bindTooltip(
+                        `${count++}`,  // ✅ Convert number to string for numbering
                         { 
                             permanent: true,
                             direction: "center",
-                            className: "custom-label" // ✅ Correct syntax
+                            className: "custom-label"
                         }
                     );
 
-                    return marker; // ✅ Return marker
+                    // Check if the feature has a name and if it's in the list to be displayed
+                    if (feature.properties && feature.properties.name) {
+                        const locationName = feature.properties.name;
+                        if (
+                            (isCinema && cinemaNamedLocations.includes(locationName)) ||
+                            (!isCinema && caravanNamedLocations.includes(locationName))
+                        ) {
+                            marker.bindTooltip(
+                                locationName, // ✅ Display location name
+                                { 
+                                    permanent: true,
+                                    direction: "right", // ✅ Position label to the right of the dot
+                                    className: "custom-location-label"
+                                }
+                            );
+                        }
+                    }
+
+                    return marker;
                 },
                 style: layerOptions.style || {} // Apply styles if available
             }).addTo(map);
-            console.log(`Loaded ${url} successfully with numbering`);
+            console.log(`Loaded ${url} successfully with numbering and labels`);
         })
         .catch(error => console.error("Error loading " + url, error));
 }
@@ -54,9 +74,11 @@ function loadGeoJSONWithNumbers(url, layerOptions, isCinema) {
 const cinemaLineStyle = { style: { color: "blue", weight: 2 } };
 const caravanLineStyle = { style: { color: "red", weight: 2 } };
 
-// Load GeoJSON files with numbering
-loadGeoJSONWithNumbers("data/cinema_1931.geojson", cinemaLineStyle, true);
-loadGeoJSONWithNumbers("data/cinema_route.geojson", cinemaLineStyle, true);
+// Load GeoJSON files with numbering and labels
+loadGeoJSONWithLabels("data/cinema_march.geojson", cinemaLineStyle, true);
+loadGeoJSONWithLabels("data/cinema_april.geojson", cinemaLineStyle, true);
+loadGeoJSONWithLabels("data/cinema_route.geojson", cinemaLineStyle, true);
 
-loadGeoJSONWithNumbers("data/caravan_1931.geojson", caravanLineStyle, false);
-loadGeoJSONWithNumbers("data/caravan_route.geojson", caravanLineStyle, false);
+loadGeoJSONWithLabels("data/caravan_march.geojson", caravanLineStyle, false);
+loadGeoJSONWithLabels("data/caravan_april.geojson", caravanLineStyle, false);
+loadGeoJSONWithLabels("data/caravan_route.geojson", caravanLineStyle, false);
