@@ -1,72 +1,170 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-  <title>RSPCA Films Map</title>
-  
-  <!-- Leaflet & MapTiler SDK -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+// MapTiler API Key
+const key = "yTjHGySI1O0GBeIuFBYT";
 
-  <script src="https://cdn.maptiler.com/maptiler-sdk-js/v3.0.1/maptiler-sdk.umd.min.js"></script>
-  <link href="https://cdn.maptiler.com/maptiler-sdk-js/v3.0.1/maptiler-sdk.css" rel="stylesheet" />
-  
-  <script src="https://cdn.maptiler.com/leaflet-maptilersdk/v4.0.2/leaflet-maptilersdk.umd.min.js"></script>
+// Initialize the map
+const map = L.map("map").setView([54.00366, -2.547855], 6);
 
-  <style>
-    /* Make the map fill the entire page */
-    #map {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-    
-    /* Numeric circle marker labels */
-    .custom-label {
-      font-size: 10px;
-      font-weight: bold;
-      color: white;
-      text-shadow: 0 0 2px black;
-      background: none !important;  /* override default leaflet tooltip style */
-      border: none !important;
-      box-shadow: none !important;
-    }
+// Load MapTiler vector tiles
+const mtLayer = L.maptiler.maptilerLayer({
+    apiKey: key,
+    style: "https://api.maptiler.com/maps/335a00a8-0f1b-475d-88a4-8cffc79b10ec/style.json"
+}).addTo(map);
 
-    /* Remove arrows (triangles) from all Leaflet tooltips */
-    .leaflet-tooltip-left:before,
-    .leaflet-tooltip-right:before,
-    .leaflet-tooltip-top:before,
-    .leaflet-tooltip-bottom:before {
-      border: none !important;
-      border-width: 0 !important;
-      content: none !important;
-    }
+// Named locations
+const caravanNamedLocations = ["Weymouth", "Leicester", "Poole", "Salisbury",
+    "Southampton", "Petersfield", "Cheltenham", "Aylesbury", "Kettering"];
+const cinemaNamedLocations = ["Swansea", "St Davids", "Haverfordwest",
+    "Cardiff", "Newport", "Knighton", "Llanon"];
 
-    /* Named location labels */
-    .custom-location-label {
-      font-size: 12px;
-      font-weight: bold;
-      color: black;
-      /* Outline text in white for better contrast */
-      text-shadow:
-        -1px -1px 0 white,
-         1px -1px 0 white,
-        -1px 1px 0 white,
-         1px 1px 0 white;
-      white-space: nowrap;
-      background: none !important;
-      border: none !important;
-      box-shadow: none !important;
-      padding: 0 !important;
-      pointer-events: none; /* label doesn't block map clicks */
+/**
+ * Simple heuristic to pick label direction (top, bottom, left, right)
+ * based on how the current point compares to the previous point.
+ */
+function getDirection(currentLatLng, previousLatLng) {
+    if (!previousLatLng) return "right"; // default for first label
+    const latDiff = currentLatLng.lat - previousLatLng.lat;
+    const lngDiff = currentLatLng.lng - previousLatLng.lng;
+
+    // If latitude difference is bigger, go top/bottom; otherwise left/right
+    if (Math.abs(latDiff) > Math.abs(lngDiff)) {
+        return latDiff > 0 ? "top" : "bottom";
+    } else {
+        return lngDiff > 0 ? "right" : "left";
     }
-  </style>
-</head>
-<body>
-  <div id="map"></div>
-  <script src="map.js"></script>
-</body>
-</html>
+}
+
+/**
+ * Offsets in pixels for each direction
+ */
+function getOffset(direction) {
+    // Adjust these to taste
+    switch (direction) {
+        case "top":    return [0, -10];
+        case "bottom": return [0,  10];
+        case "left":   return [-10, 0];
+        default:       // right
+            return [10, 0];
+    }
+}
+
+/**
+ * Loads a GeoJSON file and:
+ *  1) Draws lines/polygons with a style
+ *  2) Draws point features as:
+ *     - Circle markers with numbered tooltips
+ *     - Optionally, a separate label marker for certain names
+ */
+function loadGeoJSONWithLabels(url, layerOptions, isCinema) {
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Failed to load ${url}, HTTP status ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            let count = 1;
+            let previousLatLng = null;
+
+            // 1) Draw lines/polygons with the given style
+            L.geoJSON(data, {
+                filter: f => f.geometry.type !== "Point",
+                style: layerOptions.style
+            }).addTo(map);
+
+            // 2) Draw point features
+            L.geoJSON(data, {
+                filter: f => f.geometry.type === "Point",
+                pointToLayer: (feature, latlng) => {
+                    // Create circle marker for numbering
+                    const circle = L.circleMarker(latlng, {
+                        radius: 7,
+                        fillColor: isCinema ? "blue" : "red",
+                        color: "#000",
+                        weight: 0,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                    }).addTo(map);
+
+                    // Bind a permanent tooltip for the number
+                    circle.bindTooltip(`${count++}`, {
+                        permanent: true,
+                        direction: "center",
+                        className: "custom-label"
+                    }).openTooltip();
+
+                    // If location name is in our list, place a label
+                    if (feature.properties && feature.properties.name) {
+                        const name = feature.properties.name;
+                        const isLabelCinema = isCinema && cinemaNamedLocations.includes(name);
+                        const isLabelCaravan = !isCinema && caravanNamedLocations.includes(name);
+
+                        if (isLabelCinema || isLabelCaravan) {
+                            // By default, choose direction from heuristic
+                            let dir = getDirection(latlng, previousLatLng);
+                            previousLatLng = latlng;
+
+                            // -- OVERRIDE: Force "right" for Cardiff --
+                            if (name === "Cardiff") {
+                                dir = "right";
+                            }
+                            
+                            if (name === "Haverfordwest") {
+                                dir = "bottom";
+                            }
+
+                            // Create invisible icon for the label marker
+                            const invisibleIcon = L.divIcon({
+                                className: "empty-icon",
+                                html: ""
+                            });
+
+                            // Place the label marker at the same latlng
+                            const labelMarker = L.marker(latlng, {
+                                icon: invisibleIcon,
+                                interactive: false
+                            }).addTo(map);
+
+                            // Bind a permanent tooltip for the name, with an offset
+                            labelMarker.bindTooltip(name, {
+                                permanent: true,
+                                direction: dir,
+                                className: "custom-location-label",
+                                offset: getOffset(dir)
+                            }).openTooltip();
+                        }
+                    }
+                    return circle;
+                }
+            }).addTo(map);
+
+            console.log(`Loaded ${url} with numbering & custom label placement`);
+        })
+        .catch(error => console.error("Error loading " + url, error));
+}
+
+// Styles
+const cinemaLineStyle = { style: { color: "blue", weight: 2 } };
+const caravanLineStyle = { style: { color: "red", weight: 2 } };
+
+// Load data
+loadGeoJSONWithLabels(
+    "https://raw.githubusercontent.com/maaxlong/rspca_films_map/refs/heads/main/data/cinema_1931.geojson",
+    cinemaLineStyle,
+    true
+);
+loadGeoJSONWithLabels(
+    "https://raw.githubusercontent.com/maaxlong/rspca_films_map/refs/heads/main/data/cinema_route.geojson",
+    cinemaLineStyle,
+    true
+);
+loadGeoJSONWithLabels(
+    "https://raw.githubusercontent.com/maaxlong/rspca_films_map/refs/heads/main/data/caravan_1931.geojson",
+    caravanLineStyle,
+    false
+);
+loadGeoJSONWithLabels(
+    "https://raw.githubusercontent.com/maaxlong/rspca_films_map/refs/heads/main/data/caravan_route.geojson",
+    caravanLineStyle,
+    false
+);
