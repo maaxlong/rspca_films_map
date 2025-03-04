@@ -14,83 +14,70 @@ const mtLayer = L.maptiler.maptilerLayer({
 const caravanNamedLocations = ["Weymouth", "Leicester", "Poole", "Salisbury", "Southampton", "Petersfield", "Cheltenham", "Aylesbury", "Kettering"];
 const cinemaNamedLocations = ["St Davids", "Haverfordwest", "Cardiff", "Newport", "Knighton", "Llanon", "Swansea"];
 
-// Function to determine optimal label placement
+// Function to determine optimal label placement (avoiding interference)
 function getOptimalLabelDirection(latlng, previousLatlng) {
-    if (!previousLatlng) {
-        return "right"; // Default to right if no previous point
-    }
-    
-    const latDiff = latlng.lat - previousLatlng.lat;
-    const lngDiff = latlng.lng - previousLatlng.lng;
-
-    if (Math.abs(latDiff) > Math.abs(lngDiff)) {
-        return latDiff > 0 ? "top" : "bottom"; // Move label up or down if latitude changes more
-    } else {
-        return lngDiff > 0 ? "right" : "left"; // Move label left or right if longitude changes more
-    }
+    if (!previousLatlng) return "right"; // Default if first point
+    return latlng.lng > previousLatlng.lng ? "right" : "left"; // Adjust dynamically
 }
 
 // Function to load GeoJSON with numbered markers & dynamically placed labels
 function loadGeoJSONWithLabels(url, layerOptions, isCinema) {
     fetch(url)
         .then(response => {
-            if (!response.ok) {
-                throw new Error(`Failed to load ${url}, HTTP status ${response.status}`);
-            }
+            if (!response.ok) throw new Error(`Failed to load ${url}, HTTP status ${response.status}`);
             return response.json();
         })
         .then(data => {
-            let count = 1; // Start numbering from 1
-            let previousLatlng = null; // Track previous point for better label positioning
+            let count = 1;
+            let previousLatlng = null;
 
             // **Ensure lines are added to the map**
-            L.geoJSON(data, layerOptions).addTo(map);
+            L.geoJSON(data, {
+                style: layerOptions.style // **Ensures correct color for lines**
+            }).addTo(map);
 
             L.geoJSON(data, {
                 pointToLayer: function (feature, latlng) {
-                    // Create a circle marker
+                    // Create a circle marker (fixes issue of blue pin markers)
                     const marker = L.circleMarker(latlng, {
                         radius: 8,
-                        fillColor: isCinema ? "blue" : "red", // Blue for cinema, red for caravan
+                        fillColor: isCinema ? "blue" : "red", // Cinema = blue, Caravan = red
                         color: "#000",
                         weight: 1,
                         opacity: 1,
                         fillOpacity: 0.8
                     }).addTo(map);
 
-                    // Add number inside the dot
+                    // Add number inside the dot (ensures numbering is always present)
                     marker.bindTooltip(
-                        `${count++}`, // ✅ Keep number inside the dot
+                        `${count++}`,  
                         { 
                             permanent: true,
                             direction: "center",
                             className: "custom-label"
                         }
-                    );
+                    ).openTooltip(); // **Ensures numbering stays visible**
 
-                    // Check if the feature has a name and if it's in the list to be displayed
+                    // Handle location labels (ensures numbering is not removed)
                     if (feature.properties && feature.properties.name) {
                         const locationName = feature.properties.name;
                         if (
                             (isCinema && cinemaNamedLocations.includes(locationName)) ||
                             (!isCinema && caravanNamedLocations.includes(locationName))
                         ) {
-                            // **Determine best label placement dynamically**
+                            // Determine best label placement dynamically
                             const optimalDirection = getOptimalLabelDirection(latlng, previousLatlng);
                             previousLatlng = latlng; // Update previous point
 
-                            const label = L.tooltip({
+                            L.tooltip({
                                 permanent: true,
-                                direction: optimalDirection, // ✅ Dynamically set label position
+                                direction: optimalDirection, 
                                 className: "custom-location-label",
                                 offset: optimalDirection === "left" ? [-10, 0] :
                                         optimalDirection === "right" ? [10, 0] :
                                         optimalDirection === "top" ? [0, -10] :
                                         [0, 10] // Offset for top/bottom labels
-                            }).setContent(locationName);
-
-                            // Attach label to the circle marker
-                            marker.bindTooltip(label).openTooltip();
+                            }).setContent(locationName).addTo(map);
                         }
                     }
 
@@ -102,7 +89,7 @@ function loadGeoJSONWithLabels(url, layerOptions, isCinema) {
         .catch(error => console.error("Error loading " + url, error));
 }
 
-// Line styles
+// Line styles (fixing caravan route color issue)
 const cinemaLineStyle = { style: { color: "blue", weight: 2 } };
 const caravanLineStyle = { style: { color: "red", weight: 2 } };
 
