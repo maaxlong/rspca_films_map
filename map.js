@@ -14,7 +14,23 @@ const mtLayer = L.maptiler.maptilerLayer({
 const caravanNamedLocations = ["Weymouth", "Leicester", "Poole", "Salisbury", "Southampton", "Petersfield", "Cheltenham", "Aylesbury", "Kettering"];
 const cinemaNamedLocations = ["St Davids", "Haverfordwest", "Cardiff", "Newport", "Knighton", "Llanon", "Swansea"];
 
-// Function to load GeoJSON with numbered markers & labels
+// Function to determine optimal label placement
+function getOptimalLabelDirection(latlng, previousLatlng) {
+    if (!previousLatlng) {
+        return "right"; // Default to right if no previous point
+    }
+    
+    const latDiff = latlng.lat - previousLatlng.lat;
+    const lngDiff = latlng.lng - previousLatlng.lng;
+
+    if (Math.abs(latDiff) > Math.abs(lngDiff)) {
+        return latDiff > 0 ? "top" : "bottom"; // Move label up or down if latitude changes more
+    } else {
+        return lngDiff > 0 ? "right" : "left"; // Move label left or right if longitude changes more
+    }
+}
+
+// Function to load GeoJSON with numbered markers & dynamically placed labels
 function loadGeoJSONWithLabels(url, layerOptions, isCinema) {
     fetch(url)
         .then(response => {
@@ -25,12 +41,14 @@ function loadGeoJSONWithLabels(url, layerOptions, isCinema) {
         })
         .then(data => {
             let count = 1; // Start numbering from 1
+            let previousLatlng = null; // Track previous point for better label positioning
 
             // **Ensure lines are added to the map**
             L.geoJSON(data, layerOptions).addTo(map);
 
             L.geoJSON(data, {
                 pointToLayer: function (feature, latlng) {
+                    // Create a circle marker
                     const marker = L.circleMarker(latlng, {
                         radius: 8,
                         fillColor: isCinema ? "blue" : "red", // Blue for cinema, red for caravan
@@ -57,23 +75,29 @@ function loadGeoJSONWithLabels(url, layerOptions, isCinema) {
                             (isCinema && cinemaNamedLocations.includes(locationName)) ||
                             (!isCinema && caravanNamedLocations.includes(locationName))
                         ) {
-                            // Create a separate div icon for the label, positioned beside the marker
-                            const label = L.divIcon({
-                                className: "custom-location-label",
-                                html: locationName,
-                                iconSize: [80, 20], // Width x Height of the label box
-                                iconAnchor: [-10, 10] // Position to the left of the marker
-                            });
+                            // **Determine best label placement dynamically**
+                            const optimalDirection = getOptimalLabelDirection(latlng, previousLatlng);
+                            previousLatlng = latlng; // Update previous point
 
-                            // Place the label at an offset from the point
-                            L.marker([latlng.lat, latlng.lng], { icon: label }).addTo(map);
+                            const label = L.tooltip({
+                                permanent: true,
+                                direction: optimalDirection, // ✅ Dynamically set label position
+                                className: "custom-location-label",
+                                offset: optimalDirection === "left" ? [-10, 0] :
+                                        optimalDirection === "right" ? [10, 0] :
+                                        optimalDirection === "top" ? [0, -10] :
+                                        [0, 10] // Offset for top/bottom labels
+                            }).setContent(locationName);
+
+                            // Attach label to the circle marker
+                            marker.bindTooltip(label).openTooltip();
                         }
                     }
 
                     return marker;
                 }
             }).addTo(map);
-            console.log(`Loaded ${url} successfully with numbering and labels`);
+            console.log(`Loaded ${url} successfully with numbering and dynamic labels`);
         })
         .catch(error => console.error("Error loading " + url, error));
 }
