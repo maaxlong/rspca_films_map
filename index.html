@@ -1,46 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-    <title>RSPCA Films Map</title>
-    
-    <!-- Leaflet & MapTiler SDK -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>RSPCA Films Map</title>
+  
+  <!-- Leaflet & MapTiler SDK -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-    <script src="https://cdn.maptiler.com/maptiler-sdk-js/v3.0.1/maptiler-sdk.umd.min.js"></script>
-    <link href="https://cdn.maptiler.com/maptiler-sdk-js/v3.0.1/maptiler-sdk.css" rel="stylesheet" />
-    
-    <script src="https://cdn.maptiler.com/leaflet-maptilersdk/v4.0.2/leaflet-maptilersdk.umd.min.js"></script>
+  <script src="https://cdn.maptiler.com/maptiler-sdk-js/v3.0.1/maptiler-sdk.umd.min.js"></script>
+  <link href="https://cdn.maptiler.com/maptiler-sdk-js/v3.0.1/maptiler-sdk.css" rel="stylesheet" />
+  
+  <script src="https://cdn.maptiler.com/leaflet-maptilersdk/v4.0.2/leaflet-maptilersdk.umd.min.js"></script>
 
-    <style>
-        #map { position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
-        .custom-label {
-            font-size: 12px;
-            font-weight: bold;
-            color: white;
-            text-shadow: 0 0 2px black;
-            background: none !important;
-            border: none !important;
-            box-shadow: none !important;
-        }
-        
-        .custom-location-label {
-            font-size: 12px;
-            font-weight: bold;
-            color: black;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 2px 5px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            text-align: center;
-            white-space: nowrap;
-        }
-    </style>
+  <style>
+    /* Make the map fill the entire page */
+    #map {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    
+    /* Numeric circle marker labels */
+    .custom-label {
+      font-size: 12px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 0 2px black;
+      background: none !important;  /* override default leaflet tooltip style */
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    /* Remove arrows (triangles) from all Leaflet tooltips */
+    .leaflet-tooltip-left:before,
+    .leaflet-tooltip-right:before,
+    .leaflet-tooltip-top:before,
+    .leaflet-tooltip-bottom:before {
+      border: none !important;
+      border-width: 0 !important;
+      content: none !important;
+    }
+
+    /* Named location labels */
+    .custom-location-label {
+      font-size: 12px;
+      font-weight: bold;
+      color: black;
+      /* Outline text in white for better contrast */
+      text-shadow:
+        -1px -1px 0 white,
+         1px -1px 0 white,
+        -1px 1px 0 white,
+         1px 1px 0 white;
+      white-space: nowrap;
+      background: none !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      pointer-events: none; /* label doesn't block map clicks */
+    }
+  </style>
 </head>
 <body>
-    <div id="map"></div>
-    <script src="map.js"></script>
+  <div id="map"></div>
+  <script src="map.js"></script>
 </body>
 </html>
