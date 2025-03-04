@@ -100,9 +100,18 @@ function loadGeoJSONWithLabels(url, layerOptions, isCinema) {
                         const isLabelCaravan = !isCinema && caravanNamedLocations.includes(name);
 
                         if (isLabelCinema || isLabelCaravan) {
-                            // Choose direction based on previous point
-                            const dir = getDirection(latlng, previousLatLng);
+                            // By default, choose direction from heuristic
+                            let dir = getDirection(latlng, previousLatLng);
                             previousLatLng = latlng;
+
+                            // -- OVERRIDE: Force "right" for Cardiff --
+                            if (name === "Cardiff") {
+                                dir = "right";
+                            }
+                            
+                            if (name === "Haverfordwest") {
+                                dir = "left";
+                            }
 
                             // Create invisible icon for the label marker
                             const invisibleIcon = L.divIcon({
@@ -110,7 +119,7 @@ function loadGeoJSONWithLabels(url, layerOptions, isCinema) {
                                 html: ""
                             });
 
-                            // Place the label marker right on the same point
+                            // Place the label marker at the same latlng
                             const labelMarker = L.marker(latlng, {
                                 icon: invisibleIcon,
                                 interactive: false
