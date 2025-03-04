@@ -12,9 +12,9 @@ const mtLayer = L.maptiler.maptilerLayer({
 
 // Lists of locations where names should be displayed
 const caravanNamedLocations = ["Weymouth", "Leicester", "Poole", "Salisbury", "Southampton", "Petersfield", "Cheltenham", "Aylesbury", "Kettering"];
-const cinemaNamedLocations = ["St Davids", "Haverfordwest", "Cardiff", "Newport", "Knighton", "Llanon"];
+const cinemaNamedLocations = ["St Davids", "Haverfordwest", "Cardiff", "Newport", "Knighton", "Llanon", "Swansea"];
 
-// Function to load and display GeoJSON files with numbered markers and optional labels
+// Function to load GeoJSON with numbered markers & labels
 function loadGeoJSONWithLabels(url, layerOptions, isCinema) {
     fetch(url)
         .then(response => {
@@ -25,6 +25,10 @@ function loadGeoJSONWithLabels(url, layerOptions, isCinema) {
         })
         .then(data => {
             let count = 1; // Start numbering from 1
+
+            // **Ensure lines are added to the map**
+            L.geoJSON(data, layerOptions).addTo(map);
+
             L.geoJSON(data, {
                 pointToLayer: function (feature, latlng) {
                     const marker = L.circleMarker(latlng, {
@@ -38,7 +42,7 @@ function loadGeoJSONWithLabels(url, layerOptions, isCinema) {
 
                     // Add number inside the dot
                     marker.bindTooltip(
-                        `${count++}`,  // ✅ Keep number inside the dot
+                        `${count++}`, // ✅ Keep number inside the dot
                         { 
                             permanent: true,
                             direction: "center",
@@ -58,18 +62,17 @@ function loadGeoJSONWithLabels(url, layerOptions, isCinema) {
                                 className: "custom-location-label",
                                 html: locationName,
                                 iconSize: [80, 20], // Width x Height of the label box
-                                iconAnchor: [-10, 10] // Position it to the left of the marker
+                                iconAnchor: [-10, 10] // Position to the left of the marker
                             });
 
-                            // Place the label at the same latlng but slightly offset
+                            // Place the label at an offset from the point
                             L.marker([latlng.lat, latlng.lng], { icon: label }).addTo(map);
                         }
                     }
 
                     return marker;
-                },
-                style: layerOptions.style || {} // Apply styles if available
-            });
+                }
+            }).addTo(map);
             console.log(`Loaded ${url} successfully with numbering and labels`);
         })
         .catch(error => console.error("Error loading " + url, error));
