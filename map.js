@@ -14,7 +14,7 @@ const mtLayer = L.maptiler.maptilerLayer({
 const caravanNamedLocations = ["Weymouth", "Leicester", "Poole", "Salisbury", "Southampton", "Petersfield", "Cheltenham", "Aylesbury", "Kettering"];
 const cinemaNamedLocations = ["St Davids", "Haverfordwest", "Cardiff", "Newport", "Knighton", "Llanon"];
 
-// Function to load and display GeoJSON files with numbered markers and optional names
+// Function to load and display GeoJSON files with numbered markers and optional labels
 function loadGeoJSONWithLabels(url, layerOptions, isCinema) {
     fetch(url)
         .then(response => {
@@ -34,8 +34,11 @@ function loadGeoJSONWithLabels(url, layerOptions, isCinema) {
                         weight: 1,
                         opacity: 1,
                         fillOpacity: 0.8
-                    }).bindTooltip(
-                        `${count++}`,  // ✅ Convert number to string for numbering
+                    }).addTo(map);
+
+                    // Add number inside the dot
+                    marker.bindTooltip(
+                        `${count++}`,  // ✅ Keep number inside the dot
                         { 
                             permanent: true,
                             direction: "center",
@@ -50,21 +53,23 @@ function loadGeoJSONWithLabels(url, layerOptions, isCinema) {
                             (isCinema && cinemaNamedLocations.includes(locationName)) ||
                             (!isCinema && caravanNamedLocations.includes(locationName))
                         ) {
-                            marker.bindTooltip(
-                                locationName, // ✅ Display location name
-                                { 
-                                    permanent: true,
-                                    direction: "right", // ✅ Position label to the right of the dot
-                                    className: "custom-location-label"
-                                }
-                            );
+                            // Create a separate div icon for the label, positioned beside the marker
+                            const label = L.divIcon({
+                                className: "custom-location-label",
+                                html: locationName,
+                                iconSize: [80, 20], // Width x Height of the label box
+                                iconAnchor: [-10, 10] // Position it to the left of the marker
+                            });
+
+                            // Place the label at the same latlng but slightly offset
+                            L.marker([latlng.lat, latlng.lng], { icon: label }).addTo(map);
                         }
                     }
 
                     return marker;
                 },
                 style: layerOptions.style || {} // Apply styles if available
-            }).addTo(map);
+            });
             console.log(`Loaded ${url} successfully with numbering and labels`);
         })
         .catch(error => console.error("Error loading " + url, error));
