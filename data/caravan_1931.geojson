@@ -11,7 +11,8 @@
                 ]
             },
             "properties": {
-                "name": "Chard"
+                "name": "Chard",
+                "index": 1
             }
         },
         {
@@ -24,7 +25,8 @@
                 ]
             },
             "properties": {
-                "name": "Crewkerne"
+                "name": "Crewkerne",
+                "index": 2
             }
         },
         {
@@ -37,7 +39,8 @@
                 ]
             },
             "properties": {
-                "name": "Yeovil"
+                "name": "Yeovil",
+                "index": 3
             }
         },
         {
@@ -50,7 +53,8 @@
                 ]
             },
             "properties": {
-                "name": "Weymouth"
+                "name": "Weymouth",
+                "index": 4
             }
         },
         {
@@ -63,7 +67,8 @@
                 ]
             },
             "properties": {
-                "name": "Bridport"
+                "name": "Bridport",
+                "index": 5
             }
         },
         {
@@ -76,7 +81,8 @@
                 ]
             },
             "properties": {
-                "name": "Dorchester"
+                "name": "Dorchester",
+                "index": 6
             }
         },
         {
@@ -89,7 +95,8 @@
                 ]
             },
             "properties": {
-                "name": "Blandford"
+                "name": "Blandford",
+                "index": 7
             }
         },
         {
@@ -102,7 +109,8 @@
                 ]
             },
             "properties": {
-                "name": "Sturminster Newton"
+                "name": "Sturminster Newton",
+                "index": 8
             }
         },
         {
@@ -115,7 +123,8 @@
                 ]
             },
             "properties": {
-                "name": "Shaftesbury"
+                "name": "Shaftesbury",
+                "index": 9
             }
         },
         {
@@ -128,7 +137,8 @@
                 ]
             },
             "properties": {
-                "name": "Poole"
+                "name": "Poole",
+                "index": 10
             }
         },
         {
@@ -141,7 +151,8 @@
                 ]
             },
             "properties": {
-                "name": "Ringwood"
+                "name": "Ringwood",
+                "index": 11
             }
         },
         {
@@ -154,7 +165,8 @@
                 ]
             },
             "properties": {
-                "name": "Christchurch"
+                "name": "Christchurch",
+                "index": 12
             }
         },
         {
@@ -167,7 +179,8 @@
                 ]
             },
             "properties": {
-                "name": "New Milton"
+                "name": "New Milton",
+                "index": 13
             }
         },
         {
@@ -180,7 +193,8 @@
                 ]
             },
             "properties": {
-                "name": "Lymington"
+                "name": "Lymington",
+                "index": 14
             }
         },
         {
@@ -193,7 +207,8 @@
                 ]
             },
             "properties": {
-                "name": "Totton"
+                "name": "Totton",
+                "index": 15
             }
         },
         {
@@ -206,7 +221,8 @@
                 ]
             },
             "properties": {
-                "name": "Southampton"
+                "name": "Southampton",
+                "index": 16
             }
         },
         {
@@ -219,7 +235,8 @@
                 ]
             },
             "properties": {
-                "name": "Emsworth"
+                "name": "Emsworth",
+                "index": 17
             }
         },
         {
@@ -232,7 +249,8 @@
                 ]
             },
             "properties": {
-                "name": "Fareham"
+                "name": "Fareham",
+                "index": 18
             }
         },
         {
@@ -245,7 +263,8 @@
                 ]
             },
             "properties": {
-                "name": "Petersfield"
+                "name": "Petersfield",
+                "index": 19
             }
         },
         {
@@ -258,7 +277,8 @@
                 ]
             },
             "properties": {
-                "name": "Cowes"
+                "name": "Cowes",
+                "index": 20
             }
         },
         {
@@ -271,7 +291,8 @@
                 ]
             },
             "properties": {
-                "name": "Ryde"
+                "name": "Ryde",
+                "index": 21
             }
         },
         {
@@ -284,7 +305,8 @@
                 ]
             },
             "properties": {
-                "name": "Newport"
+                "name": "Newport",
+                "index": 22
             }
         },
         {
@@ -297,7 +319,8 @@
                 ]
             },
             "properties": {
-                "name": "Fordingbridge"
+                "name": "Fordingbridge",
+                "index": 23
             }
         },
         {
@@ -310,7 +333,8 @@
                 ]
             },
             "properties": {
-                "name": "Romsey"
+                "name": "Romsey",
+                "index": 24
             }
         },
         {
@@ -323,7 +347,8 @@
                 ]
             },
             "properties": {
-                "name": "Winchester"
+                "name": "Winchester",
+                "index": 25
             }
         },
         {
@@ -336,7 +361,8 @@
                 ]
             },
             "properties": {
-                "name": "Andover"
+                "name": "Andover",
+                "index": 26
             }
         },
         {
@@ -349,7 +375,8 @@
                 ]
             },
             "properties": {
-                "name": "Salisbury"
+                "name": "Salisbury",
+                "index": 27
             }
         },
         {
@@ -362,7 +389,8 @@
                 ]
             },
             "properties": {
-                "name": "Devizes"
+                "name": "Devizes",
+                "index": 28
             }
         },
         {
@@ -375,7 +403,8 @@
                 ]
             },
             "properties": {
-                "name": "Frome"
+                "name": "Frome",
+                "index": 29
             }
         },
         {
@@ -388,7 +417,8 @@
                 ]
             },
             "properties": {
-                "name": "Trowbridge"
+                "name": "Trowbridge",
+                "index": 30
             }
         },
         {
@@ -401,7 +431,8 @@
                 ]
             },
             "properties": {
-                "name": "Chippenham"
+                "name": "Chippenham",
+                "index": 31
             }
         },
         {
@@ -414,7 +445,8 @@
                 ]
             },
             "properties": {
-                "name": "Swindon"
+                "name": "Swindon",
+                "index": 32
             }
         },
         {
@@ -427,7 +459,8 @@
                 ]
             },
             "properties": {
-                "name": "Marlborough"
+                "name": "Marlborough",
+                "index": 33
             }
         },
         {
@@ -440,7 +473,8 @@
                 ]
             },
             "properties": {
-                "name": "Aylesbury"
+                "name": "Aylesbury",
+                "index": 34
             }
         },
         {
@@ -453,7 +487,8 @@
                 ]
             },
             "properties": {
-                "name": "Sonning Common"
+                "name": "Sonning Common",
+                "index": 35
             }
         },
         {
@@ -466,7 +501,8 @@
                 ]
             },
             "properties": {
-                "name": "Oakley"
+                "name": "Oakley",
+                "index": 36
             }
         },
         {
@@ -479,7 +515,8 @@
                 ]
             },
             "properties": {
-                "name": "Abingdon"
+                "name": "Abingdon",
+                "index": 37
             }
         },
         {
@@ -492,7 +529,8 @@
                 ]
             },
             "properties": {
-                "name": "Thame"
+                "name": "Thame",
+                "index": 38
             }
         },
         {
@@ -505,7 +543,8 @@
                 ]
             },
             "properties": {
-                "name": "Cheltenham"
+                "name": "Cheltenham",
+                "index": 39
             }
         },
         {
@@ -518,7 +557,8 @@
                 ]
             },
             "properties": {
-                "name": "Evesham"
+                "name": "Evesham",
+                "index": 40
             }
         },
         {
@@ -531,7 +571,8 @@
                 ]
             },
             "properties": {
-                "name": "Moreton-in-Marsh"
+                "name": "Moreton-in-Marsh",
+                "index": 41
             }
         },
         {
@@ -544,7 +585,8 @@
                 ]
             },
             "properties": {
-                "name": "Leicester"
+                "name": "Leicester",
+                "index": 42
             }
         },
         {
@@ -557,7 +599,8 @@
                 ]
             },
             "properties": {
-                "name": "Kettering"
+                "name": "Kettering",
+                "index": 43
             }
         },
         {
@@ -570,7 +613,8 @@
                 ]
             },
             "properties": {
-                "name": "Rugby"
+                "name": "Rugby",
+                "index": 44
             }
         },
         {
@@ -583,7 +627,8 @@
                 ]
             },
             "properties": {
-                "name": "Northampton"
+                "name": "Northampton",
+                "index": 45
             }
         },
         {
@@ -596,7 +641,8 @@
                 ]
             },
             "properties": {
-                "name": "Wellingborough"
+                "name": "Wellingborough",
+                "index": 46
             }
         },
         {
@@ -609,7 +655,8 @@
                 ]
             },
             "properties": {
-                "name": "High Wycombe"
+                "name": "High Wycombe",
+                "index": 47
             }
         },
         {
@@ -622,7 +669,8 @@
                 ]
             },
             "properties": {
-                "name": "Cookham"
+                "name": "Cookham",
+                "index": 48
             }
         },
         {
@@ -635,7 +683,8 @@
                 ]
             },
             "properties": {
-                "name": "Didcot"
+                "name": "Didcot",
+                "index": 49
             }
         }
     ]

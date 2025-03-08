@@ -11,7 +11,8 @@
                 ]
             },
             "properties": {
-                "name": "Abergavenny"
+                "name": "Abergavenny",
+                "index": 1
             }
         },
         {
@@ -24,7 +25,8 @@
                 ]
             },
             "properties": {
-                "name": "Usk"
+                "name": "Usk",
+                "index": 2
             }
         },
         {
@@ -37,7 +39,8 @@
                 ]
             },
             "properties": {
-                "name": "Newport"
+                "name": "Newport",
+                "index": 3
             }
         },
         {
@@ -50,7 +53,8 @@
                 ]
             },
             "properties": {
-                "name": "Peterston"
+                "name": "Peterston",
+                "index": 4
             }
         },
         {
@@ -63,7 +67,8 @@
                 ]
             },
             "properties": {
-                "name": "Penarth"
+                "name": "Penarth",
+                "index": 5
             }
         },
         {
@@ -76,7 +81,8 @@
                 ]
             },
             "properties": {
-                "name": "Cardiff"
+                "name": "Cardiff",
+                "index": 6
             }
         },
         {
@@ -89,7 +95,8 @@
                 ]
             },
             "properties": {
-                "name": "Penydarren"
+                "name": "Penydarren",
+                "index": 7
             }
         },
         {
@@ -102,7 +109,8 @@
                 ]
             },
             "properties": {
-                "name": "Merthyr Tydfil"
+                "name": "Merthyr Tydfil",
+                "index": 8
             }
         },
         {
@@ -115,7 +123,8 @@
                 ]
             },
             "properties": {
-                "name": "Neath"
+                "name": "Neath",
+                "index": 9
             }
         },
         {
@@ -128,7 +137,8 @@
                 ]
             },
             "properties": {
-                "name": "Swansea"
+                "name": "Swansea",
+                "index": 10
             }
         },
         {
@@ -141,7 +151,8 @@
                 ]
             },
             "properties": {
-                "name": "Parkmill"
+                "name": "Parkmill",
+                "index": 11
             }
         },
         {
@@ -154,7 +165,8 @@
                 ]
             },
             "properties": {
-                "name": "Port Talbot"
+                "name": "Port Talbot",
+                "index": 12
             }
         },
         {
@@ -167,7 +179,8 @@
                 ]
             },
             "properties": {
-                "name": "Clydach"
+                "name": "Clydach",
+                "index": 13
             }
         },
         {
@@ -180,7 +193,8 @@
                 ]
             },
             "properties": {
-                "name": "Llanelly"
+                "name": "Llanelly",
+                "index": 14
             }
         },
         {
@@ -193,7 +207,8 @@
                 ]
             },
             "properties": {
-                "name": "Llanybyther"
+                "name": "Llanybyther",
+                "index": 15
             }
         },
         {
@@ -206,7 +221,8 @@
                 ]
             },
             "properties": {
-                "name": "Llanstephan"
+                "name": "Llanstephan",
+                "index": 16
             }
         },
         {
@@ -219,7 +235,8 @@
                 ]
             },
             "properties": {
-                "name": "Whitland"
+                "name": "Whitland",
+                "index": 17
             }
         },
         {
@@ -232,7 +249,8 @@
                 ]
             },
             "properties": {
-                "name": "Spittal"
+                "name": "Spittal",
+                "index": 18
             }
         },
         {
@@ -245,7 +263,8 @@
                 ]
             },
             "properties": {
-                "name": "Maenclochog"
+                "name": "Maenclochog",
+                "index": 19
             }
         },
         {
@@ -258,7 +277,8 @@
                 ]
             },
             "properties": {
-                "name": "St Davids"
+                "name": "St Davids",
+                "index": 20
             }
         },
         {
@@ -271,7 +291,8 @@
                 ]
             },
             "properties": {
-                "name": "Haverfordwest"
+                "name": "Haverfordwest",
+                "index": 21
             }
         },
         {
@@ -284,7 +305,8 @@
                 ]
             },
             "properties": {
-                "name": "Rhayader"
+                "name": "Rhayader",
+                "index": 22
             }
         },
         {
@@ -297,7 +319,8 @@
                 ]
             },
             "properties": {
-                "name": "Talgarth"
+                "name": "Talgarth",
+                "index": 23
             }
         },
         {
@@ -310,7 +333,8 @@
                 ]
             },
             "properties": {
-                "name": "Lampeter"
+                "name": "Lampeter",
+                "index": 24
             }
         },
         {
@@ -323,7 +347,8 @@
                 ]
             },
             "properties": {
-                "name": "Llanarth"
+                "name": "Llanarth",
+                "index": 25
             }
         },
         {
@@ -336,7 +361,8 @@
                 ]
             },
             "properties": {
-                "name": "Llanon"
+                "name": "Llanon",
+                "index": 26
             }
         },
         {
@@ -349,7 +375,8 @@
                 ]
             },
             "properties": {
-                "name": "Llandrindod Wells"
+                "name": "Llandrindod Wells",
+                "index": 27
             }
         },
         {
@@ -362,7 +389,8 @@
                 ]
             },
             "properties": {
-                "name": "Presteign"
+                "name": "Presteign",
+                "index": 28
             }
         },
         {
@@ -375,7 +403,8 @@
                 ]
             },
             "properties": {
-                "name": "Llanwrtyd Wells"
+                "name": "Llanwrtyd Wells",
+                "index": 29
             }
         },
         {
@@ -388,7 +417,8 @@
                 ]
             },
             "properties": {
-                "name": "Builth Wells"
+                "name": "Builth Wells",
+                "index": 30
             }
         },
         {
@@ -401,7 +431,8 @@
                 ]
             },
             "properties": {
-                "name": "Knighton"
+                "name": "Knighton",
+                "index": 31
             }
         }
     ]
