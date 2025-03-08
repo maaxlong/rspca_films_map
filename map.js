@@ -87,7 +87,7 @@ function loadGeoJSONWithLabels(url, layerOptions, isCinema) {
                     }).addTo(map);
 
                     // Bind a permanent tooltip for the number
-                    circle.bindTooltip(`${count++}`, {
+                    circle.bindTooltip(feature.properties.index.toString(), {
                         permanent: true,
                         direction: "center",
                         className: "custom-label"
