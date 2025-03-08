@@ -1,1 +1,642 @@
-{"type":"FeatureCollection","features":[{"geometry":{"coordinates":[-2.9658622,50.8727001],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Chard","felt:color":"#C93535","felt:hasLongDescription":false,"felt:id":"0r79BLvMASnSwsYN89A49C9A1B","felt:locked":false,"felt:ordering":1740924212387525,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-2.7957029,50.8848487],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Crewkerne","felt:color":"#C93535","felt:id":"9A1qJO9CYIR0SbTZTecAuABB","felt:locked":false,"felt:ordering":1740924221111288,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-2.6335186,50.9407594],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Yeovil","felt:color":"#C93535","felt:id":"gQF1RWcoTwi9BHbspDGD13D","felt:locked":false,"felt:ordering":1740924230198370,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-2.4555375,50.6069786],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Weymouth","felt:color":"#C93535","felt:id":"BgqlN6YATiK4bgAhBOcf9AA","felt:locked":false,"felt:ordering":1740924239364220,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-2.7583627,50.7336306],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Bridport","felt:color":"#C93535","felt:id":"VWcc9CKA7SSSP0GD7iTIPBD","felt:locked":false,"felt:ordering":1740924250170178,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-2.4381325,50.7153116],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Dorchester","felt:color":"#C93535","felt:id":"IXVF5DqDS9AOrUGPJ3vLwrB","felt:locked":false,"felt:ordering":1740924260643095,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-2.16174,50.86073],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Blandford","felt:color":"#C93535","felt:id":"igdfrczRTdyX9CK9C7zEREbB","felt:locked":false,"felt:ordering":1740924272232874,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-2.3051591,50.9267567],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Sturminster Newton","felt:color":"#C93535","felt:id":"39CIGsb7pRZC9Atg80Xihj0C","felt:locked":false,"felt:ordering":1740924284748946,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-2.1975503,51.0058399],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Shaftesbury","felt:color":"#C93535","felt:id":"5p7jK2CdSny2i2vhZz8KCA","felt:locked":false,"felt:ordering":1740924294447507,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.9798261,50.7189213],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Poole","felt:color":"#C93535","felt:id":"CG1W7wzqTGysaEINS9CpYqC","felt:locked":false,"felt:ordering":1740924303389310,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.7910887,50.8460361],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Ringwood","felt:color":"#C93535","felt:id":"h0i9BlWVkRq2sxsZSKHj5hC","felt:locked":false,"felt:ordering":1740924313065460,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.7818034,50.738359],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Christchurch","felt:color":"#C93535","felt:id":"8wmzfNcnRketWbO0n9CAuRC","felt:locked":false,"felt:ordering":1740924323474404,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.6550608,50.7530988],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"New Milton","felt:color":"#C93535","felt:id":"Hjvoj9AalR9BysCHuQFwoajA","felt:locked":false,"felt:ordering":1740924335196354,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.5489512,50.7577513],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Lymington","felt:color":"#C93535","felt:id":"l9Af3VGJHTpKLOmi7n8ojmC","felt:locked":false,"felt:ordering":1740924345244041,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.4887856,50.918871],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Totton","felt:color":"#C93535","felt:id":"xylDZCyNTCKRHZS9BiVv2dC","felt:locked":false,"felt:ordering":1740924351194135,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.404304,50.9048821],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Southampton","felt:color":"#C93535","felt:id":"XzAW9AYNKSd2QddgaUm7hmD","felt:locked":false,"felt:ordering":1740924357765777,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-0.9370884,50.8480655],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Emsworth","felt:color":"#C93535","felt:id":"R9AHIqy9CRT8OIEtYbIPg49AA","felt:locked":false,"felt:ordering":1740924366765041,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.1758978,50.8523437],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Fareham","felt:color":"#C93535","felt:id":"DsqUpJKIRt2ErAejdn0aYD","felt:locked":false,"felt:ordering":1740924375568463,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-0.9376911,51.0039448],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Petersfield","felt:color":"#C93535","felt:id":"HQ9BO4acvRxGtEQCwghAA4A","felt:locked":false,"felt:ordering":1740924383336656,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.2979015,50.7624211],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Cowes","felt:color":"#C93535","felt:id":"2o6ExLUwTjqeA05YNA9AYMD","felt:locked":false,"felt:ordering":1740924393104627,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.1632129,50.7300036],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Ryde","felt:color":"#C93535","felt:id":"gue9CZsiuRTCtfTPkgTghEB","felt:locked":false,"felt:ordering":1740924402814535,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.2931902,50.6994792],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Newport","felt:color":"#C93535","felt:hasLongDescription":false,"felt:id":"G29A8dBGKRyKHwZf5ZarWaA","felt:locked":false,"felt:ordering":1740924533099362,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.7898135,50.9275247],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Fordingbridge","felt:color":"#C93535","felt:id":"MwRuPRwkT2W06DmQXmDejD","felt:locked":false,"felt:ordering":1740925352663250,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.4997532,50.9891045],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Romsey","felt:color":"#C93535","felt:id":"WhQKOjqFSEqkjhb67w44kB","felt:locked":false,"felt:ordering":1740925362516560,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.3109918,51.0617567],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Winchester","felt:color":"#C93535","felt:id":"Z655Csl8StSMD6Rv1CJ2VC","felt:locked":false,"felt:ordering":1740925372175674,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.4017032,50.984727],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Andover","felt:color":"#C93535","felt:id":"iwI8IuT9CTZ6Pf3M9AJDoLTD","felt:locked":false,"felt:ordering":1740925378642228,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.7964158,51.0703621],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Salisbury","felt:color":"#C93535","felt:id":"jehrnCg6TgCVvrxbkjDhcD","felt:locked":false,"felt:ordering":1740925385992399,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.9953058,51.3518889],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Devizes","felt:color":"#C93535","felt:id":"OrnLv4KsSD9BHr9CytjLlb8C","felt:locked":false,"felt:ordering":1740925395346615,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-2.321763,51.2310354],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Frome","felt:color":"#C93535","felt:id":"hmlPSIz1TkSi5oIM9BHwDzC","felt:locked":false,"felt:ordering":1740925405089014,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-2.2080467,51.3200171],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Trowbridge","felt:color":"#C93535","felt:id":"fBbEcBa9BRv9BpodR38whQSD","felt:locked":false,"felt:ordering":1740925414196519,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-2.113939,51.4582336],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Chippenham","felt:color":"#C93535","felt:id":"drm5vjgeRW6cusoc4VIPqB","felt:locked":false,"felt:ordering":1740925421402869,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.7854463,51.5615334],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Swindon","felt:color":"#C93535","felt:id":"L1zXZ2X9ATHeIQyREuBGMqB","felt:locked":false,"felt:ordering":1740925428012855,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.729497,51.4214715],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Marlborough","felt:color":"#C93535","felt:id":"Dp8EFdcLRMGGTRnbKxNR6A","felt:locked":false,"felt:ordering":1740925434572578,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-0.8166621,51.8157917],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Aylesbury","felt:color":"#C93535","felt:id":"PKTwRps3RgibA10INxA2CA","felt:locked":false,"felt:ordering":1740925445764299,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-0.9812328,51.5173695],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Sonning Common","felt:color":"#C93535","felt:id":"g1zCknaaQKePZUodVbk1VA","felt:locked":false,"felt:ordering":1740925482977928,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-0.914263,51.6987886],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Oakley","felt:color":"#C93535","felt:id":"GeDH4HrOSvSdTghu7KBowD","felt:locked":false,"felt:ordering":1740925519687601,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.2850126,51.6700706],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Abingdon","felt:color":"#C93535","felt:id":"3IfFV9BesRbaAzk4RPtpwOC","felt:locked":false,"felt:ordering":1740925533139181,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-0.9794809,51.748225],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Thame","felt:color":"#C93535","felt:id":"FCPhI463TreUGG4tbLRSkA","felt:locked":false,"felt:ordering":1740925543144208,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-2.0713084,51.8979906],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Cheltenham","felt:color":"#C93535","felt:id":"vqBgjgSBTYq5H9BEqGB3OhD","felt:locked":false,"felt:ordering":1740925552360602,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.9474139,52.0926348],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Evesham","felt:color":"#C93535","felt:id":"Dkd9C6usiR29BQUQFiVLcsTB","felt:locked":false,"felt:ordering":1740925560153111,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-0.727849,52.395335],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Kettering","felt:color":"#C93535","felt:id":"AWG9BXcpdQnGG9Bs5EZya7qB","felt:locked":false,"felt:ordering":1740925567560549,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.2626337,52.3722007],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Rugby","felt:color":"#C93535","felt:id":"9A9AzutHHmQlSD6yh9C9CnUj3D","felt:locked":false,"felt:ordering":1740925575301199,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-0.8950314,52.2378732],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Northampton","felt:color":"#C93535","felt:id":"9BskaX2asT49BTRcrnn6cwXB","felt:locked":false,"felt:ordering":1740925583371454,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-0.692081,52.3021867],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Wellingborough","felt:color":"#C93535","felt:id":"6ZNUxeekTeGwRcFegsOQRD","felt:locked":false,"felt:ordering":1740925593106307,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-0.749444,51.6287676],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"High Wycombe","felt:color":"#C93535","felt:id":"xxSmFNvuRC64nlLuBNCcCA","felt:locked":false,"felt:ordering":1740925604804221,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-0.7071957,51.5599373],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Cookham","felt:color":"#C93535","felt:id":"bmpK8pRqSTGY9B9CmDvjS19CC","felt:locked":false,"felt:ordering":1740925614553971,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.2426189,51.606386],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Didcot","felt:color":"#C93535","felt:id":"C1KrUQQmRUK9CTpnG3ddzbC","felt:locked":false,"felt:ordering":1740926184002100,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.1334544,52.6336325],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Leicester","felt:color":"#C93535","felt:hasLongDescription":false,"felt:id":"ebPdRbtMTpuZRM9CxR3wBxA","felt:locked":false,"felt:ordering":1740926679708336,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"},{"geometry":{"coordinates":[-1.7032244,51.9899772],"crs":{"properties":{"name":"EPSG:4326"},"type":"name"},"type":"Point"},"properties":{"name":"Moreton-in-Marsh","felt:color":"#C93535","felt:id":"WRNGxTX0TgmtGe4JX1HMaC","felt:locked":false,"felt:ordering":1740926754042906,"felt:parentId":"pcL5suieSUebiSCtvGCsHA","felt:radiusDisplayAngle":90,"felt:symbol":"dot","felt:type":"Place","felt:widthScale":1},"type":"Feature"}]}
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.9658622,
+                    50.8727001
+                ]
+            },
+            "properties": {
+                "name": "Chard"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.7957029,
+                    50.8848487
+                ]
+            },
+            "properties": {
+                "name": "Crewkerne"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.6335186,
+                    50.9407594
+                ]
+            },
+            "properties": {
+                "name": "Yeovil"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.4555375,
+                    50.6069786
+                ]
+            },
+            "properties": {
+                "name": "Weymouth"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.7583627,
+                    50.7336306
+                ]
+            },
+            "properties": {
+                "name": "Bridport"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.4381325,
+                    50.7153116
+                ]
+            },
+            "properties": {
+                "name": "Dorchester"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.16174,
+                    50.86073
+                ]
+            },
+            "properties": {
+                "name": "Blandford"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.3051591,
+                    50.9267567
+                ]
+            },
+            "properties": {
+                "name": "Sturminster Newton"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.1975503,
+                    51.0058399
+                ]
+            },
+            "properties": {
+                "name": "Shaftesbury"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.9798261,
+                    50.7189213
+                ]
+            },
+            "properties": {
+                "name": "Poole"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.7910887,
+                    50.8460361
+                ]
+            },
+            "properties": {
+                "name": "Ringwood"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.7818034,
+                    50.738359
+                ]
+            },
+            "properties": {
+                "name": "Christchurch"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.6550608,
+                    50.7530988
+                ]
+            },
+            "properties": {
+                "name": "New Milton"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.5489512,
+                    50.7577513
+                ]
+            },
+            "properties": {
+                "name": "Lymington"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.4887856,
+                    50.918871
+                ]
+            },
+            "properties": {
+                "name": "Totton"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.404304,
+                    50.9048821
+                ]
+            },
+            "properties": {
+                "name": "Southampton"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.9370884,
+                    50.8480655
+                ]
+            },
+            "properties": {
+                "name": "Emsworth"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.1758978,
+                    50.8523437
+                ]
+            },
+            "properties": {
+                "name": "Fareham"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.9376911,
+                    51.0039448
+                ]
+            },
+            "properties": {
+                "name": "Petersfield"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.2979015,
+                    50.7624211
+                ]
+            },
+            "properties": {
+                "name": "Cowes"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.1632129,
+                    50.7300036
+                ]
+            },
+            "properties": {
+                "name": "Ryde"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.2931902,
+                    50.6994792
+                ]
+            },
+            "properties": {
+                "name": "Newport"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.7898135,
+                    50.9275247
+                ]
+            },
+            "properties": {
+                "name": "Fordingbridge"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.4997532,
+                    50.9891045
+                ]
+            },
+            "properties": {
+                "name": "Romsey"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.3109918,
+                    51.0617567
+                ]
+            },
+            "properties": {
+                "name": "Winchester"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.4017032,
+                    50.984727
+                ]
+            },
+            "properties": {
+                "name": "Andover"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.7964158,
+                    51.0703621
+                ]
+            },
+            "properties": {
+                "name": "Salisbury"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.9953058,
+                    51.3518889
+                ]
+            },
+            "properties": {
+                "name": "Devizes"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.321763,
+                    51.2310354
+                ]
+            },
+            "properties": {
+                "name": "Frome"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.2080467,
+                    51.3200171
+                ]
+            },
+            "properties": {
+                "name": "Trowbridge"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.113939,
+                    51.4582336
+                ]
+            },
+            "properties": {
+                "name": "Chippenham"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.7854463,
+                    51.5615334
+                ]
+            },
+            "properties": {
+                "name": "Swindon"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.729497,
+                    51.4214715
+                ]
+            },
+            "properties": {
+                "name": "Marlborough"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.8166621,
+                    51.8157917
+                ]
+            },
+            "properties": {
+                "name": "Aylesbury"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.9812328,
+                    51.5173695
+                ]
+            },
+            "properties": {
+                "name": "Sonning Common"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.914263,
+                    51.6987886
+                ]
+            },
+            "properties": {
+                "name": "Oakley"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.2850126,
+                    51.6700706
+                ]
+            },
+            "properties": {
+                "name": "Abingdon"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.9794809,
+                    51.748225
+                ]
+            },
+            "properties": {
+                "name": "Thame"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -2.0713084,
+                    51.8979906
+                ]
+            },
+            "properties": {
+                "name": "Cheltenham"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.9474139,
+                    52.0926348
+                ]
+            },
+            "properties": {
+                "name": "Evesham"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.7032244,
+                    51.9899772
+                ]
+            },
+            "properties": {
+                "name": "Moreton-in-Marsh"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.1334544,
+                    52.6336325
+                ]
+            },
+            "properties": {
+                "name": "Leicester"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.727849,
+                    52.395335
+                ]
+            },
+            "properties": {
+                "name": "Kettering"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.2626337,
+                    52.3722007
+                ]
+            },
+            "properties": {
+                "name": "Rugby"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.8950314,
+                    52.2378732
+                ]
+            },
+            "properties": {
+                "name": "Northampton"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.692081,
+                    52.3021867
+                ]
+            },
+            "properties": {
+                "name": "Wellingborough"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.749444,
+                    51.6287676
+                ]
+            },
+            "properties": {
+                "name": "High Wycombe"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -0.7071957,
+                    51.5599373
+                ]
+            },
+            "properties": {
+                "name": "Cookham"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.2426189,
+                    51.606386
+                ]
+            },
+            "properties": {
+                "name": "Didcot"
+            }
+        }
+    ]
+}
